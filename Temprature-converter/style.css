@@ -1,0 +1,12 @@
+.container{
+    max-width: 60vw;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.form-container{
+    height: 50vh;
+    padding: 10%;
+    margin: 10%;
+    background-color: aqua;
+}
