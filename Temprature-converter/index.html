@@ -10,24 +10,26 @@
     <div class="container">
         <h1>Convert Temprature</h1>
         <div class="form-container">
-            <form action="">
-                <label for="unit">From</label>
-                <div class="unit" id="unit">
-                    <label for="C">C</label>
-                    <input type="radio" name="input-unit" value="C" id="C">
-                    <label for="F">F</label>
-                    <input type="radio" name="input-unit" value="F" id="F">
-                </div>
-                <label for="unit">To</label>
-                <div class="unit" id="unit">
-                    <label for="C">C</label>
-                    <input type="radio" name="out-unit" value="C" id="C">
-                    <label for="F">F</label>
-                    <input type="radio" name="out-unit" value="F" id="F">
-                </div>
-                <label for="temp-input">Input Temprature</label>
-                <input type="number" name="input-temp" id="input-temp">
-            </form>
+            <div class="from">
+                <label for="from">From</label>
+                <select name="from" id="from">
+                    <option value="Centigrade">Centigrade</option>
+                    <option value="Faherenheit">Faherenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="to">
+                <label for="to">to</label>
+                <select name="to" id="to">
+                    <option value="Centigrade">Centigrade</option>
+                    <option value="Faherenheit">Faherenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="Input">Input</label>
+                <input type="number" placeholder="input">
+            </div>
         </div>
     </div>
 </body>
