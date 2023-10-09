@@ -1,40 +1,87 @@
-
+body{
+    background-image: url('./temprature.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+.container{
+    background-color: rgba(0, 252, 252, 0.397);
+    max-width: 600px;
+    width: 70vw;
+    height: 60vh;
+    margin:  auto;
+    margin-top: 5%;
+    padding: 6%;
+    border-radius: 5%;
+}
+.container h1{
+    text-align: center;
+    color: yellow;
+}
 .form-container{
-    width: 40%;
-    padding: 10%;
+    width: 80%;
     margin: auto;
-    background-color: rgba(35, 35, 63, 0.623);
-    border-radius: 10%;
+    background-color: rgba(213, 250, 3, 0.397);
+    border: 2px solid rgb(0, 217, 255);
+    border-radius: 5%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
 }
 .from{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.from label{
+    width: 90%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5%;
+    padding: 2%;
+}
+
+.from div{
     display: flex;
     justify-content: space-between;
     margin: 2%;
     padding: 2%;
+    width: 94%;
 }
 
-.from select{
+.from > div select{
     outline: none;
     border: none;
-    border: 2px solid orange;
+    border: 2px solid yellow;
     border-radius: 10%;
     background-color: white;
+    font-weight: bold;
 }
 
 #input{
-    height: 25px;
+    height: 30px;
     width: 90%;
     outline: none;
     border: none;
-    border: 2px solid orange;
-    border-radius: 10%;
+    border: 2px solid yellow;
+    border-radius: 5%;
+    font-size:large;
+    font-weight: bold;
+    text-align: center;
 }
 
 #output{
     margin: 0;
-    height: 25px;
+    height: 30px;
     width: 90%;
     background-color: white;
-    border: 2px solid orange;
-    border-radius: 10%;
+    border: 2px solid yellow;
+    border-radius: 5%;
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
 }

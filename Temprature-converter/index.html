@@ -8,64 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <h1>Convert Temprature</h1>
+        <h1>Temprature Converter</h1>
         <div class="form-container">
             <div class="from">
-                <input oninput ="displayTemp()" type="number" name="input" id="input" placeholder="Input Temprature">
-                <select name="from" id="from">
-                    <option value="C">C</option>
-                    <option value="K">K</option>
-                    <option value="F">F</option>
-                </select>
+                <label for="input">input</label>
+                <div>
+                    <input oninput ="displayTemp()" type="number" name="input" id="input" placeholder="Input">
+                    <select name="from" id="from">
+                        <option value="C">C</option>
+                        <option value="K">K</option>
+                        <option value="F">F</option>
+                    </select>
+                </div>
             </div>
             <div class="from">
-                <p id="output">0</p>
-                <select name="to" id="to">
-                    <option value="F">F</option>
-                    <option value="K">K</option>
-                    <option value="C">C</option>
-                </select>
+                <label for="output">Output</label>
+                <div>
+                    <p id="output"></p>
+                    <select name="to" id="to">
+                        <option value="F">F</option>
+                        <option value="K">K</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                
             </div>
         </div>
     </div>
-    <script>
-        function changeTemp(fromUnit, toUnit, input)
-        {
-            if (input == '')
-                return ''
-            input = Number(input)
-            if (fromUnit == 'C')
-            {
-                if(toUnit == 'F')
-                    return input*1.8 + 32
-                if (toUnit == 'K')
-                    return input + 273
-            }
-            if (fromUnit == 'F')
-            {
-                if(toUnit == 'C')
-                    return (input - 32)*5/9
-                if (toUnit == 'K')
-                    return (input - 32)*5/9+ 273
-            }
-            if (fromUnit == 'K')
-            {
-                if(toUnit == 'F')
-                    return (input - 273)*1.8 + 32
-                if (toUnit == 'C')
-                    return input - 273
-            }
-            return input
-        }
-
-        function displayTemp()
-        {
-            const input = document.getElementById('input').value
-            output = document.getElementById('output')
-            const fromUnit = document.getElementById('from').value
-            const toUnit = document.getElementById('to').value
-            output.innerHTML = changeTemp(fromUnit, toUnit, input)
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
