@@ -4,6 +4,28 @@ body{
     background-size: cover;
     min-height: 100%;
 }
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 252, 252, 0.397);
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+nav div{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 300px;
+}
+
+nav div a{
+    color: black;
+    text-decoration: none;
+}
+
 .container{
     background-color: rgba(0, 252, 252, 0.397);
     max-width: 600px;
