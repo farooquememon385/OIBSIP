@@ -11,7 +11,7 @@
         <h1>Convert Temprature</h1>
         <div class="form-container">
             <div class="from">
-                <input onchange="displayTemp()" type="number" name="input" id="input" placeholder="Input Temprature">
+                <input oninput ="displayTemp()" type="number" name="input" id="input" placeholder="Input Temprature">
                 <select name="from" id="from">
                     <option value="C">C</option>
                     <option value="K">K</option>
@@ -29,11 +29,42 @@
         </div>
     </div>
     <script>
+        function changeTemp(fromUnit, toUnit, input)
+        {
+            if (input == '')
+                return ''
+            input = Number(input)
+            if (fromUnit == 'C')
+            {
+                if(toUnit == 'F')
+                    return input*1.8 + 32
+                if (toUnit == 'K')
+                    return input + 273
+            }
+            if (fromUnit == 'F')
+            {
+                if(toUnit == 'C')
+                    return (input - 32)*5/9
+                if (toUnit == 'K')
+                    return (input - 32)*5/9+ 273
+            }
+            if (fromUnit == 'K')
+            {
+                if(toUnit == 'F')
+                    return (input - 273)*1.8 + 32
+                if (toUnit == 'C')
+                    return input - 273
+            }
+            return input
+        }
+
         function displayTemp()
         {
-            input = document.getElementById('input')
+            const input = document.getElementById('input').value
             output = document.getElementById('output')
-            output.innerHTML = Number(input.value)*1.8+32
+            const fromUnit = document.getElementById('from').value
+            const toUnit = document.getElementById('to').value
+            output.innerHTML = changeTemp(fromUnit, toUnit, input)
         }
     </script>
 </body>
