@@ -11,26 +11,30 @@
         <h1>Convert Temprature</h1>
         <div class="form-container">
             <div class="from">
-                <label for="from">From</label>
+                <input onchange="displayTemp()" type="number" name="input" id="input" placeholder="Input Temprature">
                 <select name="from" id="from">
-                    <option value="Centigrade">Centigrade</option>
-                    <option value="Faherenheit">Faherenheit</option>
-                    <option value="Kelvin">Kelvin</option>
+                    <option value="C">C</option>
+                    <option value="K">K</option>
+                    <option value="F">F</option>
                 </select>
             </div>
-            <div class="to">
-                <label for="to">to</label>
+            <div class="from">
+                <p id="output">0</p>
                 <select name="to" id="to">
-                    <option value="Centigrade">Centigrade</option>
-                    <option value="Faherenheit">Faherenheit</option>
-                    <option value="Kelvin">Kelvin</option>
+                    <option value="F">F</option>
+                    <option value="K">K</option>
+                    <option value="C">C</option>
                 </select>
-            </div>
-            <div class="input">
-                <label for="Input">Input</label>
-                <input type="number" placeholder="input">
             </div>
         </div>
     </div>
+    <script>
+        function displayTemp()
+        {
+            input = document.getElementById('input')
+            output = document.getElementById('output')
+            output.innerHTML = Number(input.value)*1.8+32
+        }
+    </script>
 </body>
 </html>
